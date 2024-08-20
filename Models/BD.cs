@@ -1,3 +1,4 @@
+using System;
 using System.Data.SqlClient;
 using Dapper;
 
@@ -14,5 +15,14 @@ static public class BD
 	    {
 		    db.Execute(sql, new {pApellido = dep.Apellido, pNombre = dep.Nombre, pFecha = dep.FechaNacimiento, pFoto = dep.Foto, pPais = dep.IdPais, pDeporte = dep.IdDeporte});
 	    }
+    }
+    public static int EliminarDeportista (int IdDeportista)
+    {
+        int DeportistasEliminados = 0;
+        string sql = "DELETE FROM Deportistas WHERE IdDeportistas = @IdsDeportistas";
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+        DeportistasEliminados = db.Execute(sql, new {IdsDeportistas = IdDeportista});
+        }
+        return DeportistasEliminados;
     }
 }
