@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TP6__JJOO__Blaser_Smucler.props" />
+</Project>

@@ -7,13 +7,13 @@ public class Deportista
     
     public string Nombre {get; set;}
 
-    public datetime FechaNacimiento {get; set;}
+    public DateTime FechaNacimiento {get; set;}
 
     public string Foto {get; set;}
 
 public Deportista () {}
 
-public Deportista (string apellido, string nombre, datetime fechanacimiento, string foto )
+public Deportista (string apellido, string nombre, DateTime fechanacimiento, string foto )
 {
    Apellido = apellido;
    Nombre = nombre;

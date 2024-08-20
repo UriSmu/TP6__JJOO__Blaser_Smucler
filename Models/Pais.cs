@@ -4,13 +4,13 @@ public class Pais
 {
     public string Nombre {get; set;}
 
-    public datetime FechaFundacion {get; set;}
+    public DateTime FechaFundacion {get; set;}
 
     public string Bandera {get; set;}
 
-public Deportista () {}
+public Pais () {}
 
-public Deportista (string nombre, datetime fechafundacion, string bandera )
+public Pais (string nombre, DateTime fechafundacion, string bandera )
 {
    Nombre = nombre;
    FechaFundacion = fechafundacion;
