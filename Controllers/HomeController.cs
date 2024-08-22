@@ -56,4 +56,23 @@ public class HomeController : Controller
         ViewBag.Deportes = BD.ListarDeportes();
         return View();
     }
+
+    [HttpPost]
+    public IActionResult GuardarDeportista(Deportista dep)
+    {
+        BD.AgregarDeportista(dep);
+        return View("Index");
+    }
+
+    public IActionResult EliminarDeportista(int idCandidato)
+    {
+        //ACÁ SE PUEDE HACER Q SI NO PUEDE BORRAR, VUELVA A LA PAG. DE BORRAR DEPORTISTA CON UN MSG ERROR
+        int pudo = BD.EliminarDeportista(idCandidato);
+        return View("Index");
+    }
+
+    public IActionResult Creditos()
+    {
+        return View();
+    }
 }

@@ -16,7 +16,7 @@ static public class BD
 		    db.Execute(sql, new {pApellido = dep.Apellido, pNombre = dep.Nombre, pFecha = dep.FechaNacimiento, pFoto = dep.Foto, pPais = dep.IdPais, pDeporte = dep.IdDeporte});
 	    }
     }
-
+ 
     public static Deporte VerInfoDeporte(int idDeporte)
     {
         Deporte MiDeporte = null;
