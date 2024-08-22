@@ -30,24 +30,25 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
     public IActionResult VerDetalleDeporte(int idDeporte)
     {
         ViewBag.Deporte = BD.VerInfoDeporte(idDeporte);
         ViewBag.Deportistas = BD.ListarDeportistasPorDeporte(idDeporte);
-        return View("DetalleDeporte");
+        return View();
     }
 
     public IActionResult VerDetallePais(int idPais)
     {
         ViewBag.Pais = BD.VerInfoPais(idPais);
         ViewBag.Deportistas = BD.ListarDeportistasPorPais(idPais);
-        return View("DetallePais");
+        return View();
     }
 
     public IActionResult VerDetalleDeportista(int idDeportista)
     {
         ViewBag.Deportista = BD.VerInfoDeportista(idDeportista);
-        return View("DetalleDeportista");
+        return View();
     }
 
     public IActionResult AgregarDeportista()

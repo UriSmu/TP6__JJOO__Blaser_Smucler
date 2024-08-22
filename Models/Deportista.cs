@@ -15,9 +15,11 @@ public class Deportista
     public int IdPais {get; set;}
     
     public int IdDeporte {get; set;}
+
+    public int IdDeportistas {get; set;}
     public Deportista () {}
 
-    public Deportista (string apellido, string nombre, DateTime fechanacimiento, string foto, int pais, int deporte)
+    public Deportista (string apellido, string nombre, DateTime fechanacimiento, string foto, int pais, int deporte, int id)
     {
         Apellido = apellido;
         Nombre = nombre;
@@ -25,5 +27,6 @@ public class Deportista
         Foto = foto; 
         IdPais = pais;
         IdDeporte = deporte;
+        IdDeportistas = id;
     }
 }

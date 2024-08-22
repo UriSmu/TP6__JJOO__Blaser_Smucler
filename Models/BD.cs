@@ -22,7 +22,7 @@ static public class BD
         Deporte MiDeporte = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Deportes WHERE IdDeporte = @pId";
+            string sql = "SELECT * FROM Deportes WHERE IdDeportes = @pId";
             MiDeporte = db.QueryFirstOrDefault<Deporte>(sql, new {pId = idDeporte});
         }
         return MiDeporte;
@@ -44,7 +44,7 @@ static public class BD
         Deportista MiDeportista = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Deportistas WHERE IdDeportista = @pId";
+            string sql = "SELECT * FROM Deportistas WHERE IdDeportistas = @pId";
             MiDeportista = db.QueryFirstOrDefault<Deportista>(sql, new {pId = idDeportista});
         }
         return MiDeportista;
