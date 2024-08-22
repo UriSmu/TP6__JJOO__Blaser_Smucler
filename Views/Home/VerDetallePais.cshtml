@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>@ViewBag.Pais.Nombre</h3>
+<p>Fecha de fundación: @ViewBag.Pais.FechaFundacion.ToShortDateString()</p>
+<img src="@ViewBag.Pais.Bandera" alt="Bandera">
+
+@foreach(Deportista depor in ViewBag.Deportistas)
+{
+    <h6>@depor.Nombre</h6>
+    <a href='@Url.Action("VerDetalleDeportista",new {IdDeportista=depor.IdDeportistas})'> Ver más info</a>
+}

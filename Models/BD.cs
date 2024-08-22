@@ -13,7 +13,7 @@ static public class BD
         string sql = "INSERT INTO Deportistas(Apellido, Nombre, FechaNacimiento, Foto, IdPais, IdDeporte) VALUES (@pApellido, @pNombre, @pFecha, @pFoto, @pPais, @pDeporte)";
 	    using(SqlConnection db = new SqlConnection(_connectionString))
 	    {
-		    db.Execute(sql, new {pApellido = dep.Apellido, pNombre = dep.Nombre, pFecha = dep.FechaNacimiento, pFoto = dep.Foto, pPais = dep.IdPais, pDeporte = dep.IdDeporte});
+		    db.Execute(sql, new {pApellido = dep.Apellido, pNombre = dep.Nombre, pFecha = dep.FechaNacimiento, pFoto = dep.Foto, pPais = dep.IdPais, pDeporte = dep.IdDeportes});
 	    }
     }
  
@@ -33,7 +33,7 @@ static public class BD
         Pais MiPais = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Pais WHERE IdPais = @pId";
+            string sql = "SELECT * FROM Paises WHERE IdPais = @pId";
             MiPais = db.QueryFirstOrDefault<Pais>(sql, new {pId = idPais});
         }
         return MiPais;
@@ -63,9 +63,10 @@ static public class BD
     public static List<Deportista> ListarDeportistasPorDeporte(int idDeporte)
     {
         List<Deportista> ListaDeportistas = null;
+        string sql = "SELECT * FROM Deportistas WHERE IdDeportes = @pidDeporte";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            ListaDeportistas = db.Query<Deportista>("SELECT * FROM Deportistas WHERE IdDeporte = idDeporte").ToList();
+            ListaDeportistas = db.Query<Deportista>(sql, new{pidDeporte = idDeporte}).ToList();
         }       
         return ListaDeportistas;
     }
@@ -73,9 +74,10 @@ static public class BD
     public static List<Deportista> ListarDeportistasPorPais(int idPais)
     {
         List<Deportista> ListaDeportistas = null;
+        string sql = "SELECT * FROM Deportistas WHERE IdPais = @pidPais";
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            ListaDeportistas = db.Query<Deportista>("SELECT * FROM Deportistas WHERE IdPais = idPais").ToList();
+            ListaDeportistas = db.Query<Deportista>(sql, new{pidPais = idPais}).ToList();
         }       
         return ListaDeportistas;
     }
