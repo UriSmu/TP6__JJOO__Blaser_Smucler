@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g90wSMlcDm912iGVi+n57KwkQxBNAX8uXICYZ9de3kk=",
+  "Hash": "lOlQZ3nPvHgDsr2bHrb9HDXfvtNlpmal28+VEeRn3XU=",
   "Source": "TP6__JJOO__Blaser_Smucler",
   "BasePath": "_content/TP6__JJOO__Blaser_Smucler",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "Z:\\2024\\Programacion\\TP6__JJOO__Blaser_Smucler\\wwwroot\\img",
+      "SourceId": "TP6__JJOO__Blaser_Smucler",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2024\\Programacion\\TP6__JJOO__Blaser_Smucler\\wwwroot\\",
+      "BasePath": "_content/TP6__JJOO__Blaser_Smucler",
+      "RelativePath": "img",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img"
     },
     {
       "Identity": "Z:\\2024\\Programacion\\TP6__JJOO__Blaser_Smucler\\wwwroot\\js\\site.js",

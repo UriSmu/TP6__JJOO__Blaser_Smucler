@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\2024\\Programacion\\TP6__JJOO__Blaser_Smucler\\wwwroot\\img",
+      "PackagePath": "staticwebassets"
+    },
+    {
       "Id": "Z:\\2024\\Programacion\\TP6__JJOO__Blaser_Smucler\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

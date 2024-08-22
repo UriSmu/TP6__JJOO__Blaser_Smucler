@@ -10,11 +10,26 @@ html {
 }
 
 body {
-  margin: 10px;
-  padding: 10px;
+margin: 0;
+padding: 0;
 }
 
-
+header{
+  background-image: url(https://s1.elespanol.com/2024/02/26/deportes/juegos-olimpicos/835677172_240275781_1706x960.jpg);
+  background-position: center;
+  position: relative;
+  height: 80vh;
+}
+header h1{
+  font-size: 100px !important;
+  position: absolute;
+  bottom: 0;
+}
+.navbar{
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
 footer {
   margin-top: 10px;
   padding: 10px;
