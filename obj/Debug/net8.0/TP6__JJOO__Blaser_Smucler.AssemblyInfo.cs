@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP6__JJOO__Blaser_Smucler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2cc265a446de898f094e2f6ddc5ed880cd9dcf1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb861e823210698b57e38854c0e6edb0dd8d81a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP6__JJOO__Blaser_Smucler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP6__JJOO__Blaser_Smucler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
