@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach(Pais objPais in ViewBag.Paises)
+{
+    <h3>@objPais.Nombre</h3>
+    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
+}
+
+@foreach(Deporte objDeporte in ViewBag.Deportes)
+{
+    <h3>@objDeporte.Nombre</h3>
+    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
+}
+
+@foreach(Deportista objDeportista in ViewBag.Deportistas)
+{
+    <h3>@objDeportista.Nombre</h3>
+    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
+}

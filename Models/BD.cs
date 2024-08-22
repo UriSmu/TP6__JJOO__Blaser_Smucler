@@ -16,7 +16,7 @@ static public class BD
 		    db.Execute(sql, new {pApellido = dep.Apellido, pNombre = dep.Nombre, pFecha = dep.FechaNacimiento, pFoto = dep.Foto, pPais = dep.IdPais, pDeporte = dep.IdDeporte});
 	    }
     }
-
+ 
     public static Deporte VerInfoDeporte(int idDeporte)
     {
         Deporte MiDeporte = null;
@@ -98,5 +98,38 @@ static public class BD
             DeportistasEliminados = db.Execute(sql, new {IdsDeportistas = IdDeportista});
         }
         return DeportistasEliminados;
+    }
+
+    public static List<Pais> ListarPaisesBusqueda(string busqueda)
+    {
+        List<Pais> ListaPaises = null;
+        string sql = "SELECT * FROM Paises WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaPaises = db.Query<Pais>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaPaises;
+    }
+
+    public static List<Deporte> ListarDeportesBusqueda(string busqueda)
+    {
+        List<Deporte> ListaDeportes = null;
+        string sql = "SELECT * FROM Deportes WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaDeportes = db.Query<Deporte>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaDeportes;
+    }
+
+    public static List<Deportista> ListarDeportistaBusqueda(string busqueda)
+    {
+        List<Deportista> ListaDeportistas = null;
+        string sql = "SELECT * FROM Deportistas WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaDeportistas = db.Query<Deportista>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaDeportistas;
     }
 }
