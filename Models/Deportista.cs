@@ -14,7 +14,7 @@ public class Deportista
 
     public int IdPais {get; set;}
     
-    public int IdDeporte {get; set;}
+    public int IdDeportes {get; set;}
 
     public int IdDeportistas {get; set;}
     public Deportista () {}
@@ -26,7 +26,7 @@ public class Deportista
         FechaNacimiento = fechanacimiento;
         Foto = foto; 
         IdPais = pais;
-        IdDeporte = deporte;
+        IdDeportes = deporte;
         IdDeportistas = id;
     }
 }

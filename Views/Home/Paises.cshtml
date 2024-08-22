@@ -7,4 +7,5 @@
     <h3>@objPais.Nombre</h3>
     <p>Fecha de fundación: @objPais.FechaFundacion.ToShortDateString()</p>
     <img src="@objPais.Bandera" alt="Bandera">
+    <a href='@Url.Action("VerDetallePais",new {IdPais=objPais.IdPais})'> Ver detalle país</a>
 }
