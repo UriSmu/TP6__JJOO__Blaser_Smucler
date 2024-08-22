@@ -24,6 +24,14 @@ header h1{
   font-size: 100px !important;
   position: absolute;
   bottom: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+}
+.header-overlay{
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(#000e, #fff9);
 }
 .navbar{
   position: fixed;
@@ -35,4 +43,8 @@ footer {
   padding: 10px;
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
+}
+.p1
+{
+ font-size: large;
 }
