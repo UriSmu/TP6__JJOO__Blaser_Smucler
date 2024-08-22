@@ -75,4 +75,13 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [HttpGet]
+    public IActionResult Buscar(string busqueda)
+    {
+        ViewBag.Paises = BD.ListarPaisesBusqueda(busqueda);
+        ViewBag.Deportes = BD.ListarDeportesBusqueda(busqueda);
+        ViewBag.Deportistas = BD.ListarDeportistaBusqueda(busqueda);
+        return View();
+    }
 }

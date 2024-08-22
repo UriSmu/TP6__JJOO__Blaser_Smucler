@@ -99,4 +99,37 @@ static public class BD
         }
         return DeportistasEliminados;
     }
+
+    public static List<Pais> ListarPaisesBusqueda(string busqueda)
+    {
+        List<Pais> ListaPaises = null;
+        string sql = "SELECT * FROM Paises WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaPaises = db.Query<Pais>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaPaises;
+    }
+
+    public static List<Deporte> ListarDeportesBusqueda(string busqueda)
+    {
+        List<Deporte> ListaDeportes = null;
+        string sql = "SELECT * FROM Deportes WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaDeportes = db.Query<Deporte>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaDeportes;
+    }
+
+    public static List<Deportista> ListarDeportistaBusqueda(string busqueda)
+    {
+        List<Deportista> ListaDeportistas = null;
+        string sql = "SELECT * FROM Deportistas WHERE Nombre LIKE '%' + @pBusqueda + '%'";
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            ListaDeportistas = db.Query<Deportista>(sql, new {pBusqueda = busqueda}).ToList();
+        }       
+        return ListaDeportistas;
+    }
 }
