@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>@ViewBag.Deporte.Nombre</h2>
+<img src="@ViewBag.Deporte.Foto" alt=@ViewBag.Deporte.Nombre>
+
+<h3>Deportistas</h3>
+@foreach(Deportista depor in ViewBag.Deportistas)
+{
+    <h6>@depor.Nombre</h6>
+    <a href='@Url.Action("VerDetalleDeportista",new {IdDeportista=depor.IdDeportistas})'> Ver más info</a>
+}

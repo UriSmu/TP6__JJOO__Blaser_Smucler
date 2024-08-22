@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach(Pais objPais in ViewBag.ListaPaises)
+{
+    <h3>@objPais.Nombre</h3>
+    <p>Fecha de fundación: @objPais.FechaFundacion.ToShortDateString()</p>
+    <img src="@objPais.Bandera" alt="Bandera">
+}
