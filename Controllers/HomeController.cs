@@ -85,4 +85,9 @@ public class HomeController : Controller
         ViewBag.Deportistas = BD.ListarDeportistaBusqueda(busqueda);
         return View();
     }
+
+    public IActionResult Historia()
+    {
+        return View();
+    }
 }
