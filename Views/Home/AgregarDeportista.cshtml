@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Rellene todos los campos solicitados</h3>
+<form action='@Url.ActionLink("GuardarDeportista", "Home")' method="POST">
+    <input type="text" name="Apellido" placeholder="Apellido">
+    <input type="text" name="Nombre" placeholder="Nombre">
+    <input type="date" name="FechaNacimiento" placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
+    <input type="text" name="Foto" placeholder="Foto (ponga una url de una imágen del deportista)">
+    <select name="IdPais">
+        @foreach(Pais paises in ViewBag.Paises)
+        {
+            <option value="@paises.IdPais">@paises.Nombre</option>
+        }
+    </select>
+    <select name="IdDeportes">
+        @foreach(Deporte deportes in ViewBag.Deportes)
+        {
+            <option value="@deportes.IdDeportes">@deportes.Nombre</option>
+        }
+    </select>
+    <input type="submit" value="Agregar Deportista">
+</form>

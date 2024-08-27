@@ -8,6 +8,6 @@
 <h3>Deportistas</h3>
 @foreach(Deportista depor in ViewBag.Deportistas)
 {
-    <h6>@depor.Nombre</h6>
+    <h6>@(depor.Nombre + " " + depor.Apellido)</h6>
     <a href='@Url.Action("VerDetalleDeportista",new {IdDeportista=depor.IdDeportistas})'> Ver más info</a>
 }

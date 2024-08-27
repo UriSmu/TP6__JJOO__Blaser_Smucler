@@ -2,7 +2,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h3>@(ViewBag.Deportista.Nombre + ViewBag.Deportista.Apellido)</h3>
+<h3>@(ViewBag.Deportista.Nombre + " " + ViewBag.Deportista.Apellido)</h3>
 <p>Fecha de nacimiento: @ViewBag.Deportista.FechaNacimiento.ToShortDateString()</p>
 <img src="@ViewBag.Deportista.Foto" alt="Foto Deportista">
 
