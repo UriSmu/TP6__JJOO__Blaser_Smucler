@@ -1,11 +1,23 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<div class="container text-center">
+    <div class="row align-items-center">
 @foreach(Pais objPais in ViewBag.ListaPaises)
 {
-    <h3>@objPais.Nombre</h3>
-    <p>Fecha de fundación: @objPais.FechaFundacion.ToShortDateString()</p>
-    <img src="@objPais.Bandera" alt="Bandera">
-    <a href='@Url.Action("VerDetallePais",new {IdPais=objPais.IdPais})'> Ver detalle país</a>
+     <div class="col">
+    <div class="card" style="width: 18rem;">
+    <img src="@objPais.Bandera" class="card-img-top" alt="@objPais.Nombre">
+    <div class="card-body">
+    <h5 class="card-title">@objPais.Nombre</h5>
+    <p class="card-text">Fecha de fundación: @objPais.FechaFundacion.ToShortDateString()</p>
+    <a href='@Url.Action("VerDetallePais",new {IdPais=objPais.IdPais})' class="btn btn-primary">Ver detalle país</a>
+         </div>
+    </div>
+</div>
 }
+    </div>
+</div>
+
+
+       
