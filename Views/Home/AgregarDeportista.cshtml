@@ -1,24 +1,40 @@
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Agregar Deportista";
 }
 
-<h3>Rellene todos los campos solicitados</h3>
-<form action='@Url.ActionLink("GuardarDeportista", "Home")' method="POST">
-    <input type="text" name="Apellido" placeholder="Apellido">
-    <input type="text" name="Nombre" placeholder="Nombre">
-    <input type="date" name="FechaNacimiento" placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
-    <input type="text" name="Foto" placeholder="Foto (ponga una url de una imágen del deportista)">
-    <select name="IdPais">
-        @foreach(Pais paises in ViewBag.Paises)
-        {
-            <option value="@paises.IdPais">@paises.Nombre</option>
-        }
-    </select>
-    <select name="IdDeportes">
-        @foreach(Deporte deportes in ViewBag.Deportes)
-        {
-            <option value="@deportes.IdDeportes">@deportes.Nombre</option>
-        }
-    </select>
-    <input type="submit" value="Agregar Deportista">
-</form>
+<div class="container mt-4">
+    <h3 class="mb-3">Rellene todos los campos solicitados</h3>
+    <form action='@Url.ActionLink("GuardarDeportista", "Home")' method="POST">
+        <div class="mb-3">
+            <input type="text" name="Apellido" class="form-control" placeholder="Apellido">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+            <input type="date" name="FechaNacimiento" class="form-control" placeholder="Fecha de Nacimiento (yyyy/mm/dd)">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="Foto" class="form-control" placeholder="Foto (URL de una imagen del deportista)">
+        </div>
+        <div class="mb-3">
+            <select name="IdPais" class="form-select">
+                @foreach(Pais paises in ViewBag.Paises)
+                {
+                    <option value="@paises.IdPais">@paises.Nombre</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <select name="IdDeportes" class="form-select">
+                @foreach(Deporte deportes in ViewBag.Deportes)
+                {
+                    <option value="@deportes.IdDeportes">@deportes.Nombre</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Agregar Deportista" class="btn btn-primary">
+        </div>
+    </form>
+</div>

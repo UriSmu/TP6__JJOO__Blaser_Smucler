@@ -1,21 +1,43 @@
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Búsqueda";
 }
 
-@foreach(Pais objPais in ViewBag.Paises)
-{
-    <h3>@objPais.Nombre</h3>
-    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
-}
+<div class="container mt-4">
+    <div class="row">
+        @foreach(Pais objPais in ViewBag.Paises)
+        {
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@objPais.Nombre</h5>
+                        <a href='@Url.Action("VerDetallePais", new { IdPais = objPais.IdPais })' class="btn btn-primary">Ver detalle país</a>
+                    </div>
+                </div>
+            </div>
+        }
 
-@foreach(Deporte objDeporte in ViewBag.Deportes)
-{
-    <h3>@objDeporte.Nombre</h3>
-    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
-}
+        @foreach(Deporte objDeporte in ViewBag.Deportes)
+        {
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@objDeporte.Nombre</h5>
+                        <a href='@Url.Action("VerDetalleDeporte", new { IdDeporte = objDeporte.IdDeportes })' class="btn btn-primary">Ver detalle deporte</a>
+                    </div>
+                </div>
+            </div>
+        }
 
-@foreach(Deportista objDeportista in ViewBag.Deportistas)
-{
-    <h3>@objDeportista.Nombre</h3>
-    //TODOS LOS DATOS QUE HAYAN QUE MOSTRAR
-}
+        @foreach(Deportista objDeportista in ViewBag.Deportistas)
+        {
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@objDeportista.Nombre @objDeportista.Apellido</h5>
+                        <a href='@Url.Action("VerDetalleDeportista", new {IdDeportista = objDeportista.IdDeportistas})' class="btn btn-primary">Ver detalle deportista</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -67,9 +67,12 @@ public class HomeController : Controller
 
     public IActionResult EliminarDeportista(int idCandidato)
     {
-        //ACÁ SE PUEDE HACER Q SI NO PUEDE BORRAR, VUELVA A LA PAG. DE BORRAR DEPORTISTA CON UN MSG ERROR
         int pudo = BD.EliminarDeportista(idCandidato);
-        return View("Index");
+        if (pudo == 0)
+        {
+            ViewBag.MsgError = "No se pudo borrar al deportista";
+        }
+        return View();
     }
 
     public IActionResult Creditos()

@@ -1,18 +1,18 @@
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Deportes";
 }
 
-<div class="container text-center">
-    <div class="row align-items-center">
+<div class="container text-center mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach(Deporte objDeporte in ViewBag.ListaDeportes)
         {
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card h-100">
                     <img src="@objDeporte.Foto" class="card-img-top" alt="@objDeporte.Nombre">
                     <div class="card-body">
                         <h5 class="card-title">@objDeporte.Nombre</h5>
-                        <p class="card-text">@objDeporte.Nombre es un deporte olimpico muy reconocido a nivel mundial</p>
-                        <a href='@Url.Action("VerDetalleDeporte",new {IdDeporte=objDeporte.IdDeportes})' class="btn btn-primary">Ver detalle deporte</a>
+                        <p class="card-text">@objDeporte.Nombre es un deporte olímpico muy reconocido a nivel mundial.</p>
+                        <a href='@Url.Action("VerDetalleDeporte", new { IdDeporte = objDeporte.IdDeportes })' class="btn btn-primary">Ver detalle deporte</a>
                     </div>
                 </div>
             </div>

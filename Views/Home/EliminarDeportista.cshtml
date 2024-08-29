@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Eliminar Deportista";
+}
+
+<h2>Eliminar Deportista</h2>
+
+@if (ViewBag.MsgError != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.MsgError
+    </div>
+}
+else
+{
+    <div class="alert alert-success" role="alert">
+        <p>El deportista ha sido eliminado exitosamente.</p>
+    </div>
+}
+
+<a href='@Url.Action("Index", "Home")' class="btn btn-primary">Volver al inicio</a>

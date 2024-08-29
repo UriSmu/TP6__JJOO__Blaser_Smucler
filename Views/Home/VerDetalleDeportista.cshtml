@@ -1,17 +1,14 @@
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Deportista - Ver Detalle";
 }
 
-<h3>@(ViewBag.Deportista.Nombre + " " + ViewBag.Deportista.Apellido)</h3>
-<p>Fecha de nacimiento: @ViewBag.Deportista.FechaNacimiento.ToShortDateString()</p>
-<img src="@ViewBag.Deportista.Foto" alt="Foto Deportista">
-<div class="card mb-3">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    <a href='@Url.Action("VerDetallePais",new {idPais=ViewBag.Deportista.IdPais})' class="btn btn-primary">Ver detalle país</a>
-    <a href='@Url.Action("VerDetalleDeporte",new {idDeportes=ViewBag.Deportista.IdDeportes})' class="btn btn-primary">Ver detalle Deporte</a>
-  </div>
+<div class="container mt-4">
+    <h3>@(ViewBag.Deportista.Nombre + " " + ViewBag.Deportista.Apellido)</h3>
+    <p>Fecha de nacimiento: @ViewBag.Deportista.FechaNacimiento.ToShortDateString()</p>
+    <div class="text-center mb-4">
+        <img src="@ViewBag.Deportista.Foto" alt="Foto Deportista" class="img-fluid rounded">
+    </div>
+    <a href='@Url.Action("VerDetallePais", new {idPais = ViewBag.Deportista.IdPais})' class="btn btn-primary">Ver detalle país</a>
+    <a href='@Url.Action("VerDetalleDeporte", new {idDeporte = ViewBag.Deportista.IdDeportes})' class="btn btn-primary">Ver detalle Deporte</a>
+    <a href='@Url.Action("EliminarDeportista", new {idCandidato = ViewBag.Deportista.IdDeportistas})' class="btn btn-primary">Eliminar Deportista</a>
 </div>

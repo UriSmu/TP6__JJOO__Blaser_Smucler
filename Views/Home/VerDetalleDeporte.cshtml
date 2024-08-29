@@ -1,13 +1,26 @@
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Deporte - Ver Detalle";
 }
 
-<h2>@ViewBag.Deporte.Nombre</h2>
-<img src="@ViewBag.Deporte.Foto" alt=@ViewBag.Deporte.Nombre>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">@ViewBag.Deporte.Nombre</h2>
+    <div class="text-center mb-4">
+        <img src="@ViewBag.Deporte.Foto" alt="@ViewBag.Deporte.Nombre" class="img-fluid">
+    </div>
 
-<h3>Deportistas</h3>
-@foreach(Deportista depor in ViewBag.Deportistas)
-{
-    <h6>@(depor.Nombre + " " + depor.Apellido)</h6>
-    <a href='@Url.Action("VerDetalleDeportista",new {IdDeportista=depor.IdDeportistas})'> Ver más info</a>
-}
+    <h3>Deportistas</h3>
+    <div class="row">
+        @foreach(Deportista depor in ViewBag.Deportistas)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="@depor.Foto" class="card-img-top" alt="Foto">
+                    <div class="card-body">
+                        <h5 class="card-title">@depor.Nombre @depor.Apellido</h5>
+                        <a href='@Url.Action("VerDetalleDeportista", new {IdDeportista = depor.IdDeportistas})' class="btn btn-primary">Ver más info</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
