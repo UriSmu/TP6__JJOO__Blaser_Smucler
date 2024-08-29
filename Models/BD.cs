@@ -6,7 +6,7 @@ namespace TP6__JJOO__Blaser_Smucler.Models;
 
 static public class BD
 {
-    private static string _connectionString = @"Server=PC-URI\SQLEXPRESS; DataBase=Tp6_JJOO; Trusted_Connection=true;";
+    private static string _connectionString = @"Server=localhost; DataBase=Tp6_JJOO; Trusted_Connection=true;";
     
     public static void AgregarDeportista(Deportista dep)
     {
